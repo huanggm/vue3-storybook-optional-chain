@@ -24,7 +24,7 @@ export default {
     },
     size: {
       type: String,
-      validator: function (value) {
+      validator: function (value: any) {
         return ['small', 'medium', 'large'].indexOf(value) !== -1;
       },
     },
@@ -35,7 +35,7 @@ export default {
 
   emits: ['click'],
 
-  setup(props, { emit }) {
+  setup(props: any, { emit }: any) {
     props = reactive(props);
 
     const test: Test = {
